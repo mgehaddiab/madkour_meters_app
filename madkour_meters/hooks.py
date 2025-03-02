@@ -265,5 +265,12 @@ fixtures = [
                 "Madkour Meters APP"
             ]
         ]
+    ]},
+    {"doctype": "Workspace", "filters": [
+        [
+            "name", "in", [
+                "Meters Workspace"
+            ]
+        ]
     ]}
 ]
