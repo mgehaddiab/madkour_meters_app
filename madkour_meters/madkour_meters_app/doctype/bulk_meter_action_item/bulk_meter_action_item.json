@@ -1,0 +1,129 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-19 20:10:07.012552",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "bulk_ref",
+  "meter_ref",
+  "status",
+  "action",
+  "value",
+  "result",
+  "ip",
+  "port",
+  "syncid",
+  "meter_type",
+  "password",
+  "serial"
+ ],
+ "fields": [
+  {
+   "fieldname": "bulk_ref",
+   "fieldtype": "Link",
+   "label": "Bulk Referance",
+   "options": "Bulk Meter Action"
+  },
+  {
+   "fieldname": "meter_ref",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter Referance",
+   "options": "Meters"
+  },
+  {
+   "default": "Todo",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Todo\nSuccess\nFailed"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Data",
+   "label": "Action"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Long Text",
+   "label": "Value"
+  },
+  {
+   "fieldname": "result",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Result"
+  },
+  {
+   "fetch_from": "meter_ref.ip",
+   "fetch_if_empty": 1,
+   "fieldname": "ip",
+   "fieldtype": "Data",
+   "label": "Meter IP"
+  },
+  {
+   "fetch_from": "meter_ref.port",
+   "fetch_if_empty": 1,
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "label": "Meter Port"
+  },
+  {
+   "fetch_from": "meter_ref.sync_meter_id",
+   "fetch_if_empty": 1,
+   "fieldname": "syncid",
+   "fieldtype": "Data",
+   "label": "Meter Sync ID"
+  },
+  {
+   "fetch_from": "meter_ref.type",
+   "fetch_if_empty": 1,
+   "fieldname": "meter_type",
+   "fieldtype": "Data",
+   "label": "Meter Type"
+  },
+  {
+   "fetch_from": "meter_ref.password",
+   "fetch_if_empty": 1,
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Meter Password"
+  },
+  {
+   "fetch_from": "meter_ref.serial",
+   "fetch_if_empty": 1,
+   "fieldname": "serial",
+   "fieldtype": "Data",
+   "label": "Meter Serial"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:36:54.478116",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Bulk Meter Action Item",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

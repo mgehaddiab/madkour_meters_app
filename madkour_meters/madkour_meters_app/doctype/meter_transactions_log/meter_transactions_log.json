@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-02-16 21:53:49.964598",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reference",
+  "action",
+  "type",
+  "log",
+  "data",
+  "customer"
+ ],
+ "fields": [
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Meter Reference"
+  },
+  {
+   "fieldname": "action",
+   "fieldtype": "Long Text",
+   "label": "Action",
+   "read_only": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "Success\nFailed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "log",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Log",
+   "read_only": 1
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Data",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:36:15.457341",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Transactions Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_seen": 1
+}

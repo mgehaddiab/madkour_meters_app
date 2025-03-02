@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-06 11:08:50.269431",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "issue_type",
+  "issue_description",
+  "meter",
+  "periority",
+  "status",
+  "resloution"
+ ],
+ "fields": [
+  {
+   "fieldname": "issue_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Issue Type",
+   "options": "Customer consumption review\nMeter offline\nMeter configuration issue\nOnline Payment Issue\nCreate Online Payment User\nSend SMS\nRefund Meter\nStation Charge Related issues\nDelete Meter\nCustomer Onboarding\nCreate Manual Receipt",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "issue_description",
+   "fieldtype": "Long Text",
+   "in_list_view": 1,
+   "label": "Issue Description",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meters",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "periority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Periority",
+   "options": "P4\nP3\nP2\nP1",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nInprogress\nClosed\nCancelled",
+   "reqd": 1
+  },
+  {
+   "fieldname": "resloution",
+   "fieldtype": "Long Text",
+   "label": "Resloution"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:35:20.478557",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Support Ticket",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Meter Manager Role",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Meters Customer Service",
+   "share": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Red",
+   "title": "Open"
+  },
+  {
+   "color": "Blue",
+   "title": "Inprogress"
+  },
+  {
+   "color": "Green",
+   "title": "Closed"
+  },
+  {
+   "color": "Gray",
+   "title": "Cancelled"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

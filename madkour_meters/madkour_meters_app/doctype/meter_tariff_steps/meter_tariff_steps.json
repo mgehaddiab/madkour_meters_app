@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-08-18 13:16:26.306089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "from_kw",
+  "to_kw",
+  "price",
+  "extra_charge"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "from_kw",
+   "fieldtype": "Float",
+   "label": "From"
+  },
+  {
+   "fieldname": "to_kw",
+   "fieldtype": "Float",
+   "label": "To"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "label": "Price"
+  },
+  {
+   "fieldname": "extra_charge",
+   "fieldtype": "Float",
+   "label": "Extra Charge"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 22:32:29.678653",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Tariff Steps",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

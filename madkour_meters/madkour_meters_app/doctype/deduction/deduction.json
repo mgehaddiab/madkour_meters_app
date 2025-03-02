@@ -1,0 +1,142 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Deduction-.####",
+ "creation": "2024-01-21 13:51:22.796274",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "customer",
+  "from",
+  "to",
+  "payment_date",
+  "deduction_amount",
+  "payment_status",
+  "column_break_nlszc",
+  "deduction_type",
+  "payment_entry_reference",
+  "comment"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meters",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fetch_from": "meter.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "label": "Payment Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "deduction_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Deduction Amount",
+   "non_negative": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "payment_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Status",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nlszc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Deduction Type",
+   "options": "\nTariff Difference",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "payment_entry_reference",
+   "fieldtype": "Link",
+   "label": "Payment Entry Reference",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "comment",
+   "fieldtype": "Text",
+   "label": "Comment",
+   "read_only_depends_on": "eval:doc.payment_status == 'Paid'"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:45:30.338362",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Deduction",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

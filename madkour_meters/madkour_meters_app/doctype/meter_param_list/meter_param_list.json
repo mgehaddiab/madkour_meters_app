@@ -1,0 +1,37 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-05 20:32:40.278546",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "param",
+  "value"
+ ],
+ "fields": [
+  {
+   "fieldname": "param",
+   "fieldtype": "Link",
+   "label": "Param",
+   "options": "Meter Type Param Set"
+  },
+  {
+   "fieldname": "value",
+   "fieldtype": "Long Text",
+   "label": "Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 22:34:59.006885",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Param List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

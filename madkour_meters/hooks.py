@@ -242,3 +242,28 @@ app_license = "unlicense"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+fixtures = [
+    {"doctype": "Custom Field", "filters": [
+        [
+            "module", "in", [
+                "Madkour Meters APP"
+            ]
+        ]
+    ]},
+    {"doctype": "Client Script", "filters": [
+        {"enabled":1},
+        [
+            "module", "in", [
+                "Madkour Meters APP"
+            ]
+        ]
+    ]},
+    {"doctype": "Server Script", "filters": [
+        {"disabled":0},
+        [
+            "module", "in", [
+                "Madkour Meters APP"
+            ]
+        ]
+    ]}
+]

@@ -1,0 +1,137 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-15 16:49:58.214882",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_info",
+  "meter",
+  "meter_serial",
+  "customer",
+  "meter_project",
+  "bill_info",
+  "bill_date",
+  "available_credit",
+  "bill_amount",
+  "max_demand",
+  "total_import",
+  "total_consumption",
+  "total_export",
+  "tariff_info",
+  "tariff_scheme"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer_info",
+   "fieldtype": "Section Break",
+   "label": "Customer Info"
+  },
+  {
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "label": "Meter",
+   "options": "Meters"
+  },
+  {
+   "fetch_from": "meter.serial",
+   "fieldname": "meter_serial",
+   "fieldtype": "Data",
+   "label": "Serial"
+  },
+  {
+   "fetch_from": "meter.customer",
+   "fetch_if_empty": 1,
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "meter.project",
+   "fieldname": "meter_project",
+   "fieldtype": "Data",
+   "label": "Project"
+  },
+  {
+   "fieldname": "bill_info",
+   "fieldtype": "Section Break",
+   "label": "Bill Info"
+  },
+  {
+   "fieldname": "bill_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Bill Date"
+  },
+  {
+   "fieldname": "available_credit",
+   "fieldtype": "Float",
+   "label": "Avilable Credit"
+  },
+  {
+   "fieldname": "bill_amount",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Bill Amount"
+  },
+  {
+   "fieldname": "max_demand",
+   "fieldtype": "Float",
+   "label": "Max Demand"
+  },
+  {
+   "fieldname": "total_import",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Total Import"
+  },
+  {
+   "fieldname": "total_consumption",
+   "fieldtype": "Float",
+   "label": "Total Consumption"
+  },
+  {
+   "fieldname": "total_export",
+   "fieldtype": "Float",
+   "label": "Total Export"
+  },
+  {
+   "fieldname": "tariff_info",
+   "fieldtype": "Section Break",
+   "label": "Tariff Info"
+  },
+  {
+   "fieldname": "tariff_scheme",
+   "fieldtype": "Link",
+   "label": "Tariff Scheme",
+   "options": "Meter Tariff Scheme"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:33:03.936991",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meters Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

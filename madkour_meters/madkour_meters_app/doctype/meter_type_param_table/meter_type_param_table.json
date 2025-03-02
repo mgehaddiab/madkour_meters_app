@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-07-06 10:02:01.440508",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter_type",
+  "param_type",
+  "attr_type",
+  "attr_index",
+  "is_method",
+  "method_index",
+  "obis",
+  "hex"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter_type",
+   "fieldtype": "Link",
+   "label": "Meter Type",
+   "options": "Meter Type"
+  },
+  {
+   "fieldname": "param_type",
+   "fieldtype": "Select",
+   "label": "Parameter Type",
+   "options": "Clock\nData\nRegister\nDisconnectControl\nAccount\nActivityCalendar\nProfileGeneric"
+  },
+  {
+   "fieldname": "attr_type",
+   "fieldtype": "Select",
+   "label": "Attribute Type",
+   "options": "NA\nINT32\nOCTET_STRING\nSTRUCT"
+  },
+  {
+   "fieldname": "attr_index",
+   "fieldtype": "Data",
+   "label": "Attribute Index"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_method",
+   "fieldtype": "Check",
+   "label": "Is Method"
+  },
+  {
+   "fieldname": "method_index",
+   "fieldtype": "Data",
+   "label": "Method Index",
+   "mandatory_depends_on": "is_method"
+  },
+  {
+   "fieldname": "obis",
+   "fieldtype": "Data",
+   "label": "OBIS"
+  },
+  {
+   "default": "true",
+   "fieldname": "hex",
+   "fieldtype": "Check",
+   "label": "Convert HEX"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-03-02 22:33:39.209571",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Type Param Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

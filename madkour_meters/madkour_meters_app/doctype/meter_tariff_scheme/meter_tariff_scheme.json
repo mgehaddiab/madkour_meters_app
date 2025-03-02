@@ -1,0 +1,90 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:tariff_sheme_name",
+ "creation": "2024-08-18 13:12:19.470754",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tariff_sheme_name",
+  "tariff_type",
+  "status",
+  "tariff_steps",
+  "start_date",
+  "end_date",
+  "tariff_group"
+ ],
+ "fields": [
+  {
+   "fieldname": "tariff_sheme_name",
+   "fieldtype": "Data",
+   "label": "Tariff Sheme Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "tariff_type",
+   "fieldtype": "Select",
+   "label": "Tariff Type",
+   "options": "Step Tariff"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInActive\nPending\nCancelled"
+  },
+  {
+   "fieldname": "tariff_steps",
+   "fieldtype": "Table",
+   "label": "Tariff Steps",
+   "options": "Meter Tariff Steps"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Datetime",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Datetime",
+   "label": "End Date"
+  },
+  {
+   "default": "Residential",
+   "fieldname": "tariff_group",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Tariff Group",
+   "options": "Residential\nCommercial",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:31:59.288312",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Tariff Scheme",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

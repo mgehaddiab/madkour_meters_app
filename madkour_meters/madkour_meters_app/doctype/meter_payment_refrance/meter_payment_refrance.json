@@ -1,0 +1,281 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-09 21:06:37.400481",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "payment_source",
+  "payment_mid",
+  "payment_refrance",
+  "status",
+  "customer_information_section",
+  "customer",
+  "phone",
+  "unit",
+  "block",
+  "project",
+  "payfor",
+  "payment_details_section",
+  "charge_token",
+  "amount",
+  "charge_amount",
+  "payment_referance",
+  "bank_related_info_section",
+  "bank_status",
+  "bank_update_date",
+  "bank_update_card",
+  "bank_authorization_code",
+  "bank_order_id",
+  "technical_information_section",
+  "details",
+  "session_log",
+  "bank_update_error",
+  "bank_update_object"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meters",
+   "reqd": 1
+  },
+  {
+   "default": "Payment Gateway",
+   "fieldname": "payment_source",
+   "fieldtype": "Select",
+   "label": "Payment Source",
+   "options": "Payment Gateway\nStation Cash\nStation Card",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_mid",
+   "fieldtype": "Data",
+   "label": "Payment MID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payment_refrance",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Payment Refrance",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Success\nPayment Recived\nFailed\nPending\nTodo\nCharge Failed\nSuccess Retry\nCharge Retry Failed\nManually Refunded\nManuall Success",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_information_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.mobile_no",
+   "fetch_if_empty": 1,
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fetch_from": "meter.unit",
+   "fetch_if_empty": 1,
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "label": "Unit"
+  },
+  {
+   "fetch_from": "meter.block",
+   "fetch_if_empty": 1,
+   "fieldname": "block",
+   "fieldtype": "Data",
+   "label": "Block"
+  },
+  {
+   "fetch_from": "meter.project",
+   "fetch_if_empty": 1,
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "payfor",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Pay For",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "charge_token",
+   "fieldtype": "Data",
+   "label": "Charge Token",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount",
+   "reqd": 1
+  },
+  {
+   "fieldname": "charge_amount",
+   "fieldtype": "Float",
+   "label": "Charge Amount"
+  },
+  {
+   "fieldname": "payment_referance",
+   "fieldtype": "Link",
+   "label": "Payment Entry Referance",
+   "options": "Payment Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_related_info_section",
+   "fieldtype": "Section Break",
+   "label": "Bank Related Info"
+  },
+  {
+   "fieldname": "bank_status",
+   "fieldtype": "Data",
+   "label": "Bank Update Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_update_date",
+   "fieldtype": "Datetime",
+   "label": "Bank Update Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_update_card",
+   "fieldtype": "Data",
+   "label": "Card Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_authorization_code",
+   "fieldtype": "Data",
+   "label": "Bank Authorization Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_order_id",
+   "fieldtype": "Data",
+   "label": "Bank Order Id",
+   "read_only": 1
+  },
+  {
+   "fieldname": "technical_information_section",
+   "fieldtype": "Section Break",
+   "label": "Technical Information"
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Text",
+   "label": "Details"
+  },
+  {
+   "fieldname": "session_log",
+   "fieldtype": "Text",
+   "label": "Session Creatation Log"
+  },
+  {
+   "fieldname": "bank_update_error",
+   "fieldtype": "Long Text",
+   "label": "Bank Update Error",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bank_update_object",
+   "fieldtype": "JSON",
+   "label": "Bank Update Object",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:31:36.570239",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meter Payment Refrance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Success Retry"
+  },
+  {
+   "color": "Green",
+   "title": "Success"
+  },
+  {
+   "color": "Red",
+   "title": "Charge Failed"
+  },
+  {
+   "color": "Gray",
+   "title": "Todo"
+  },
+  {
+   "color": "Gray",
+   "title": "Pending"
+  },
+  {
+   "color": "Red",
+   "title": "Failed"
+  },
+  {
+   "color": "Purple",
+   "title": "Manually Refunded"
+  },
+  {
+   "color": "Orange",
+   "title": "Payment Recived"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1
+}

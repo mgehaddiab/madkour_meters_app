@@ -1,0 +1,72 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-04-09 20:22:46.011999",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter",
+  "meter_user",
+  "meter_type",
+  "meter_serial"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Meter",
+   "options": "Meters",
+   "reqd": 1
+  },
+  {
+   "fieldname": "meter_user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "default": "Electrical",
+   "fieldname": "meter_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Meter Type",
+   "options": "Electrical\nWater",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "meter.serial",
+   "fieldname": "meter_serial",
+   "fieldtype": "Data",
+   "label": "Meter Serial"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-02 22:37:08.526702",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "User Meter",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

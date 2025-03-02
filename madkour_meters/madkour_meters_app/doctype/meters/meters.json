@@ -1,0 +1,483 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "creation": "2023-02-16 20:01:19.741355",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "meter_name",
+  "section_break_2",
+  "sim_card",
+  "ip",
+  "column_break_4",
+  "port",
+  "column_break_6",
+  "password",
+  "column_break_10",
+  "sync_meter_id",
+  "column_break_12",
+  "serial",
+  "column_break_8",
+  "type",
+  "section_break_12",
+  "customer",
+  "tariff_group",
+  "column_break_thufn",
+  "app_no",
+  "contract_type",
+  "section_break_swe8v",
+  "project",
+  "unit",
+  "block",
+  "area",
+  "compound",
+  "section_break_13",
+  "meter_network_status",
+  "column_break_22",
+  "meter_last_update",
+  "section_break_24",
+  "avilable_credit",
+  "column_break_8mlwx",
+  "total_consumption",
+  "installments_tab",
+  "installments_section",
+  "installments",
+  "deduction_section",
+  "deduction_log",
+  "deduction_amount",
+  "meter_details_tab",
+  "initial_charge_amount",
+  "init_status",
+  "tokens_section",
+  "token_creation_date",
+  "section_break_jceh3",
+  "token_1",
+  "meter_token_1_status_",
+  "token_1_completed_date",
+  "column_break_cj08a",
+  "token_2",
+  "meter_token_2_status_",
+  "token_2_completed_date",
+  "column_break_xtsy4",
+  "token_3",
+  "meter_token_3_status_",
+  "token_3_completed_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "meter_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sim_card",
+   "fieldtype": "Link",
+   "label": "SIM Card",
+   "mandatory_depends_on": "eval:doc.customer",
+   "options": "SIM Cards"
+  },
+  {
+   "fetch_from": "sim_card.ip",
+   "fieldname": "ip",
+   "fieldtype": "Data",
+   "label": "IP",
+   "mandatory_depends_on": "eval:doc.customer"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "4059",
+   "fieldname": "port",
+   "fieldtype": "Data",
+   "label": "Port",
+   "mandatory_depends_on": "eval:doc.customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "password",
+   "fieldtype": "Data",
+   "label": "Password",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sync_meter_id",
+   "fieldtype": "Data",
+   "label": "sync Meter ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "serial",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Serial",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "ElectricalMeter-Electrometer\nElectricalMeter-Iskraemeco-ME200\nWaterMeter-Electrometer\nWaterMeter-Iskraemeco\nElectricalMeter-Quill",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "default": "Residential",
+   "fieldname": "tariff_group",
+   "fieldtype": "Select",
+   "label": "Tariff Group",
+   "options": "Residential\nCommercial"
+  },
+  {
+   "fieldname": "column_break_thufn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "app_no",
+   "fieldtype": "Data",
+   "label": "APPNo",
+   "mandatory_depends_on": "eval:doc.customer"
+  },
+  {
+   "default": "Prepaid",
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type",
+   "options": "Prepaid\nPostpaid"
+  },
+  {
+   "fieldname": "section_break_swe8v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project",
+   "mandatory_depends_on": "eval:doc.customer",
+   "options": "Project"
+  },
+  {
+   "fetch_from": "customer.unit",
+   "fetch_if_empty": 1,
+   "fieldname": "unit",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Unit",
+   "mandatory_depends_on": "eval:doc.customer"
+  },
+  {
+   "fetch_from": "customer.block",
+   "fetch_if_empty": 1,
+   "fieldname": "block",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Block",
+   "mandatory_depends_on": "eval:doc.customer"
+  },
+  {
+   "depends_on": "eval:doc.customer",
+   "fetch_from": "customer.area",
+   "fetch_if_empty": 1,
+   "fieldname": "area",
+   "fieldtype": "Data",
+   "label": "Area"
+  },
+  {
+   "fetch_from": "customer.compound",
+   "fetch_if_empty": 1,
+   "fieldname": "compound",
+   "fieldtype": "Select",
+   "in_preview": 1,
+   "label": "Compound",
+   "options": "Narges\nYasmeen\nChillout\nGardenia\nWesal\nSarai-S1\nSarai-S2\nSarai-Facility"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break",
+   "label": "Meter Last Update"
+  },
+  {
+   "fieldname": "meter_network_status",
+   "fieldtype": "Read Only",
+   "is_virtual": 1,
+   "label": "Meter Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "meter_last_update",
+   "fieldtype": "Read Only",
+   "is_virtual": 1,
+   "label": "Last Update",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_24",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "avilable_credit",
+   "fieldtype": "Read Only",
+   "is_virtual": 1,
+   "label": "Meter Balance [EGP]",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8mlwx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_consumption",
+   "fieldtype": "Read Only",
+   "label": "Total Consumption [KW]"
+  },
+  {
+   "fieldname": "installments_tab",
+   "fieldtype": "Tab Break",
+   "is_virtual": 1,
+   "label": "Installments And Deduction"
+  },
+  {
+   "fieldname": "installments_section",
+   "fieldtype": "Section Break",
+   "label": "Installments"
+  },
+  {
+   "fieldname": "installments",
+   "fieldtype": "Table",
+   "is_virtual": 1,
+   "label": "Installments Log",
+   "options": "Installment Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deduction_section",
+   "fieldtype": "Section Break",
+   "label": "Deduction"
+  },
+  {
+   "fieldname": "deduction_log",
+   "fieldtype": "Table",
+   "label": "Deduction Log",
+   "options": "Installment Table"
+  },
+  {
+   "fieldname": "deduction_amount",
+   "fieldtype": "Currency",
+   "label": "Deduction Amount To Pay"
+  },
+  {
+   "fieldname": "meter_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "Meter Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "initial_charge_amount",
+   "fieldtype": "Currency",
+   "label": "Initial Charge Amount",
+   "non_negative": 1,
+   "read_only_depends_on": "eval:doc.init_status == 1"
+  },
+  {
+   "default": "0",
+   "fieldname": "init_status",
+   "fieldtype": "Check",
+   "label": "Meter Initiation Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tokens_section",
+   "fieldtype": "Section Break",
+   "label": "TOKENS"
+  },
+  {
+   "fieldname": "token_creation_date",
+   "fieldtype": "Datetime",
+   "label": "Token Creation Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jceh3",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "token_1",
+   "fieldtype": "Data",
+   "label": "Token 1",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "meter_token_1_status_",
+   "fieldtype": "Check",
+   "label": "Token 1 Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token_1_completed_date",
+   "fieldtype": "Datetime",
+   "label": "Token 1 Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_cj08a",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "token_2",
+   "fieldtype": "Data",
+   "label": "Token 2",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "meter_token_2_status_",
+   "fieldtype": "Check",
+   "label": "Token 2 Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token_2_completed_date",
+   "fieldtype": "Datetime",
+   "label": "Token 2 Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xtsy4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "token_3",
+   "fieldtype": "Data",
+   "label": "Token 3",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "meter_token_3_status_",
+   "fieldtype": "Check",
+   "label": "Token 3 Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "token_3_completed_date",
+   "fieldtype": "Datetime",
+   "label": "Token 3 Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Meter Status",
+   "link_doctype": "Meter Status",
+   "link_fieldname": "meter"
+  },
+  {
+   "group": "Meter Status",
+   "link_doctype": "Meter Transactions Log",
+   "link_fieldname": "reference"
+  },
+  {
+   "group": "Meter Finance",
+   "link_doctype": "Meters Invoice",
+   "link_fieldname": "meter"
+  },
+  {
+   "group": "Meter Finance",
+   "link_doctype": "Meter Payment Refrance",
+   "link_fieldname": "meter"
+  },
+  {
+   "group": "Meter Finance",
+   "link_doctype": "Installments Meters",
+   "link_fieldname": "meter_id"
+  },
+  {
+   "group": "Meter Status",
+   "link_doctype": "Meter Support Ticket",
+   "link_fieldname": "meter"
+  },
+  {
+   "group": "Meter Operations",
+   "link_doctype": "Bulk Meter Action",
+   "link_fieldname": "meter",
+   "table_fieldname": "meters"
+  },
+  {
+   "group": "Meter Operations",
+   "link_doctype": "Bulk Meter Action Item",
+   "link_fieldname": "meter_ref"
+  }
+ ],
+ "modified": "2025-03-02 22:29:55.488632",
+ "modified_by": "Administrator",
+ "module": "Madkour Meters APP",
+ "name": "Meters",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "serial,ip",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
